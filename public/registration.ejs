@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+
+    <section class="login-section">
+        <p><a href="/"> <img src="assets/img/left-arrow.svg" alt="Left Arrow"> Хотите вернуться на главную страницу?</a></p>
+        <div class="login-box">
+            <div class="login-box__info">
+                <h3>Введите свой email, чтобы сделать бронирование по специальному тарифу Bauzer</h3>
+                <form action="/registration" method="POST">
+                    <label for="email">
+                        <p>Почта:</p>
+                        <input type="text" name="email" id="email" placeholder="email">
+                    </label>
+                    <label for="email">
+                        <p>Пароль:</p>
+                        <input type="number" name="password" id="password" placeholder="password">
+                    </label>
+                    <label for="email">
+                        <p>Повторите Пароль:</p>
+                        <input type="number" name="passwordagain" id="passwordagain" placeholder="password">
+                    </label>
+                    <label for="" class="btn">
+                        <button type="submit">Продолжить</button>
+                    </label>
+                </form>
+            </div>
+            <div class="login-box__img">
+                <img src="assets/img/hostel-image-3.jpg" alt="image">
+
+                <div class="registration-pre__box">
+                    <h3>Вы уже зарегистрированы?</h3>
+                    <a href="/login">Войти!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <%- include('./partials/scripts.ejs') %>    
+</body>
+</html>

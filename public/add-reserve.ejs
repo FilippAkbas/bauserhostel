@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+
+    <%- include('./partials/headerv2.ejs') %>
+
+    <section class="booking booking__form">
+        <form method="POST" action="/add-reserve">
+            <label for="fullnameInput" class="surname">
+                <input type="text" name="fullname" id="fullnameInput" placeholder=" ">
+                <span class="inputPlaceholder">ФИО (латиницей):</span>
+            </label>
+            <label for="number" class="number">
+                <input type="number" name="phone" id="numberInput" placeholder=" ">
+                <span class="inputPlaceholder">Номер телефона:</span>
+            </label>
+            <label for="pasaportIdInput" class="pasaportId">
+                <input type="number" name="pasaporID" id="pasaportIdInput" placeholder=" ">
+                <span class="inputPlaceholder">Номер паспорта:</span>
+            </label>
+            <label for="pasaportDateInput" class="pasaportDate">
+                <input type="text" name="pasaporDate" id="pasaportDateInput" placeholder=" ">
+                <span class="inputPlaceholder">Дата выдачи паспорта:</span>
+            </label>
+            <label for="btn" class="btn">
+                <button type="submit">Забранировать</button>
+            </label>
+        </form>
+    </section>
+
+    <%- include('./partials/footer.ejs') %> 
+
+    <%- include('./partials/scripts.ejs') %>    
+    <script>
+        // const btn = document.querySelector('.btn button');
+        // btn.addEventListener('click', (e)=> {
+        //     e.preventDefault();
+
+        //     const surname = document.querySelector('#surnameInput').value;
+        //     const userphone = document.querySelector('#numberInput').value;
+
+        //     fetch('/reserve', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify({
+        //             surname: surname,
+        //             phone: userphone
+        //         })
+        //     })
+        //         .then(response => response.json())
+        //         .then(result => successFunction())
+        // });
+
+        // function successFunction() {
+        //     document.querySelector('#surnameInput').value = '';
+        //     document.querySelector('#numberInput').value = '';
+        //     MicroModal.show('modal-1')
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+
+    <%- include('./partials/headerv2.ejs') %>
+
+    <section class="booking">
+      <article>
+        <h3 class="title">Ваши данные которые вы велли при бронировании:</h3>
+        <div class="info">
+          <%
+            if(reserve.length > 0) { reserve.forEach(function(data) {
+          %>
+            <span><b>ФИО:</b> <%= data.fullname   %></span>
+            <span><b>Номер телефона:</b> <%= data.phone || 'No date'  %></span>
+            <span><b>Номер паспорта:</b> <%= data.pasaporID || 'No date'  %></span>
+            <span><b>Дата выдачи паспорта:</b> <%= data.pasaporDate || 'No date'  %></span>
+          <%
+              });
+            }
+          %>
+        </div>
+      </article>
+    </section>
+
+    <%- include('./partials/footer.ejs') %> 
+    <%- include('./partials/scripts.ejs') %>    
+</body>
+</html>

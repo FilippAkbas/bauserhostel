@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul, li {
+    list-style: none;
+}
+
+section {
+    margin-top: 50px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #ffffff57;
+    z-index: 100;
+}
+
+.header.relative-header {
+    position: relative;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header nav .logo a {
+    flex-basis: 20%;
+    display: flex;
+}
+
+.header nav .logo img {
+    width: 80px;
+}
+
+.header nav .menu-list {
+    display: flex;
+    align-items: center;
+    flex-basis: 60%;
+}
+
+.header nav .menu-list li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.header nav .menu-list li a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav .menu-list li a.active {
+    background-color: #ddd;
+}
+
+.header nav .menu-list li a img {
+    width: 10px;
+    margin-left: 5px;
+}
+
+.header nav .menu-list li a:hover {
+    background-color: #ddd;
+}
+
+.mega-submenu {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#city-2,#city-3 {
+    display: none;
+}
+
+#hostel-list.active + .mega-submenu {
+    display: flex;
+}
+
+.city-menu {
+    display: flex;
+}
+
+.city-menu a {
+    color: #aaa;
+}
+
+.city-menu a.active {
+    color: #222;
+}
+
+.city-box {
+    display: flex;
+}
+
+.city-box a {
+    margin: 20px 0;
+    font-size: 14px;
+    padding: 0 !important;
+    height: 20px;
+    display: inline-block !important; 
+}
+
+.city-box a h3 {
+    margin: 0 !important;
+}
+
+.city-list {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.city-list li a {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-buttons {
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-buttons a {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-buttons a img {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.reserv-btn {
+    background-color: #106a30;
+    color: #fff;
+    padding: 10px 15px !important;
+    border-radius: 5px;
+}
+
+.main-screen {
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 0 !important;
+}
+
+.main-screen__box {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.main-screen__box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-text {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    width: 40%;
+    background-color: #ffffffb0;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.box-text p {
+    line-height: 22px;
+}
+
+.box-text p a {
+    color: #106a30;
+    font-weight: bold;
+}
+
+.section-title > h2 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #106a30;
+    width: 30%;
+    font-size: 36px;
+}
+
+.specials-list {
+    display: flex;
+}
+
+.specials-list__item {
+    flex-basis: 25%;
+    border: 1px solid #106a30;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.item-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-title {}
+
+.item-text p {
+    font-size: 14px;
+}
+
+.item-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item-button a {
+    background-color: #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.item-button a img {
+    width: 15px;
+    margin-left: 10px;
+}
+
+.offers {
+    display: flex;
+}
+
+.offers-list {
+    flex-basis: 50%;
+    padding: 15px;
+}
+
+.offers-list li {
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.offers-list li:last-child {
+    font-weight: bold;
+}
+
+.offers-img {
+    flex-basis: 50%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.offers-img img {
+    border-radius: 5px;
+}
+
+.special-offer {
+    border-radius: 5px;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.special-offer p {
+    margin: 10px 10px 10px 0;
+    background-color: #ddd;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.footer {
+    margin-top: 25px;
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-box__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box__info .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-box__info .footer-logo img {
+    width: 100px;
+}
+
+.footer-box__info > * {
+    margin-bottom: 15px;
+}
+
+.footer-social__list {
+    display: flex;
+}
+
+.footer-social__list .social-item {
+    margin-right: 15px;
+}
+
+.footer-social__list .social-item a img {
+    width: 25px;
+}
+
+.footer-box__menu, .footer-box__subs {}
+
+.footer-box__menu .box-menu__title h3, .footer-box__subs .box-subs__title h3 {
+    color: #aaa;
+}
+
+.footer-box__menu .box-menu__list, .footer-box__subs .box-subs__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box__menu .box-menu__list li, .footer-box__subs .box-subs__list li {
+    margin-bottom: 10px;
+}
+
+.footer-box__menu .box-menu__list li a, .footer-box__subs .box-subs__list li a {
+    font-size: 14px;
+}
+
+.footer-politics {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.about-us__banner {
+    position: relative;
+    background: url(../img/hostel-image-4.jpg) no-repeat center center / cover;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.about-us__banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000063;
+    z-index: 0;
+}
+
+.banner-box {
+    position: relative;
+    display: flex;
+    z-index: 10;
+}
+
+.banner-title {
+    flex-basis: 50%;
+}
+
+.banner-title h1 {
+    font-size: 56px;
+}
+
+.banner-text {
+    flex-basis: 50%;
+    background-color: #aaaaaaba;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.about-us__box {
+    display: flex;
+}
+
+.about-us__box .about__box-text {
+    flex-basis: 50%;
+}
+
+.about-us__box .about__box-text h2 {
+    font-size: 32px;
+}
+
+.about-us__box .about__box-text p {
+    line-height: 20px;
+    color: #7e7e7e;
+}
+
+.about-us__box .about__box-text ul li {
+    color: #7e7e7e;
+}
+
+.about-us__box .about__box-info {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us__box .about__box-info li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.about-us__box .about__box-info li .number {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.about-us__box .about__box-info li .text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info img {
+    width: 50px;
+}
+
+.contact-info a {
+    margin-bottom: 10px;
+}
+
+.login-section {
+    background: url(../img/hostel-image-5.jpg) no-repeat center center / cover;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section p {
+    width: 80%;
+    display: inline-block;
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.login-section p a {
+    color: #fff;
+}
+
+.login-section p img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+.login-box {
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.login-box__info {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.login-box__info.no-padding {
+    padding: 0 !important;
+}
+
+.login-box__info form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-box__info form label {
+    margin-bottom: 15px;
+}
+
+.login-box__info form label p {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.login-box__info form label input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.login-box__info form label button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-box__img {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.login-box__img img {
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.registration-pre__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff94;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.registration-pre__box a {
+    padding: 5px 15px;
+    background-color: #106a30;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.booking {
+    width: 100%;
+    height: 100%;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking article .title {
+    margin-bottom: 20px;
+}
+
+.booking article .info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.booking article .info span {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #b9b9b9;
+    border: 1px solid #6d141b;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.booking article .info span:last-child {
+    margin-right: 0;
+}
+
+.booking__form {
+    justify-content: center;
+    align-items: center;
+}
+
+.booking .title {
+    width: 100%;
+    text-align: center;
+}
+
+.booking ul {
+    display: flex;
+    flex: 0 auto;
+    padding: 0 !important;
+}
+
+.booking ul li {
+    border: 1px solid rgba(221, 221, 221, 0.192);
+    padding: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 3px 5px #ddd;
+    transition: all .5s;
+}
+
+.booking ul li:last-child {
+    margin-right: 0;
+}
+
+.booking ul li:hover {
+    border-color: #ddd;
+    box-shadow: none;
+}
+
+.booking form {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0;
+}
+
+.booking form label {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    flex-direction: column;
+}
+
+.booking form label.btn {
+    justify-content: center;
+}
+
+.inputPlaceholder {
+    position: absolute;
+    bottom: 10px;
+    font-size: 13px;
+    color: #b9b9b9;
+    transition: 0.25s ease;
+    z-index: 0;
+}
+
+.booking form label button {
+    width: 100%;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: all .5s;
+}
+
+.booking form label button:hover {
+    box-shadow: 1px 1px 1px #ddd;
+}
+
+.booking form label input {
+    width: 100%;
+    border: none;
+    padding: 0;
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.booking form label input:focus,
+.booking form label input:hover {
+    outline: none;
+}
+
+.booking form label input:focus + .inputPlaceholder,
+.booking form label input:not(:placeholder-shown)+.inputPlaceholder {
+    transform: translateY(-20px);
+    color: #000;
+}
+
+.account {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.account .title {
+    width: max-content;
+    font-weight: 400;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #6d141b;
+}
+
+.account p a {
+    color: #6d141b;
+    font-weight: bold;
+}
+
+.account ul {
+    width: max-content;
+    padding: 0 !important;
+}
+
+.account ul li {
+    border: 1px solid #6d141b;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    transition: all .5s ease;
+}
+
+.account ul li:hover {
+    background: #6d141b;
+}
+
+.account ul li:hover a {
+    color: #fff;
+}

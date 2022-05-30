@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('./partials/headerv2.ejs') %>
+
+    <section class="booking">
+      <h3 class="title">Тут вы можете найти свои бронирования: </h3>
+      <ul>
+        <% 
+          if (reserves.length) { 
+            reserves.forEach(function(data) { 
+        %>
+          <li>
+            <article>
+              <a href="/reserve/<%= data.id %>">
+                <h2>
+                  <p>Ваше бронирование</p>
+                </h2>
+                <p><b>ФИО:</b> <%= data.fullname %></p>
+                <p><b>Номер телефона:</b> <%= data.phone %></p>
+              </a>
+            </article>
+          </li>
+         <%
+            });
+          }
+          else
+          {
+          %>
+          <li>
+            <article>
+              Нету Бронирования
+            </article>
+          </li>
+          <%
+          }
+          %>
+      </ul>
+    </section>
+
+    <%- include('./partials/footer.ejs') %> <%-
+    include('./partials/scripts.ejs') %>
+  </body>
+</html>

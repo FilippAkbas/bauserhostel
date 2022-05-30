@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('./partials/headerv2.ejs') %>
+
+    <section class="account">
+      <h4 class="title"> Добро пожаловать <b>Filipp</b> в аккаунт тут вы можете найти свои бронироваине </h4>
+      <p>Если вы еще не имеете аккаунт <a href="/registration">зарегистрируйтесь</a></p>
+      <ul>
+        <li><a href="/reserves">Мои бронирования</a></li>
+        <li><a href="/add-reserve">Забранировать Отель</a></li>
+        <li><a href="/logout">Выйти</a></li>
+      </ul>
+    </section>
+
+    <%- include('./partials/footer.ejs') %> 
+    <%- include('./partials/scripts.ejs') %>
+  </body>
+</html>
